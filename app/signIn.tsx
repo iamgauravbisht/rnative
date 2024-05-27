@@ -37,21 +37,23 @@ export default function OTPScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView className="h-full  bg-white ">
       <ScrollView
+        className="h-full w-full flex flex-col p-4"
         contentContainerStyle={{
-          height: "100%",
-          flexDirection: "column",
+          flex: 1,
           justifyContent: "space-between",
         }}
       >
         <View>
           <View>
-            <Image source={images.one} style={styles.images} />
-            <Text style={styles.title}>Continue With your Mobile Number </Text>
+            <Image source={images.one} className="w-56 h-56" />
+            <Text className="text-2xl font-bold text-indigo-800 mb-4">
+              Continue With your Mobile Number
+            </Text>
           </View>
           <View>
-            <Text style={styles.label}>Phone Number</Text>
+            <Text className="">Phone Number</Text>
             <View style={styles.inputContainer}>
               <View style={styles.prefixContainer}>
                 <Image source={images.two} style={styles.flagIcon} />
@@ -104,21 +106,21 @@ export default function OTPScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    height: "100%",
-    padding: 16,
-    backgroundColor: "#fff",
-  },
-  images: {
-    width: 200,
-    height: 200,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "rgba(53, 44, 135, 1)",
-    marginBottom: 16,
-  },
+  // container: {
+  //   height: "100%",
+  //   padding: 16,
+  //   backgroundColor: "#fff",
+  // },
+  // images: {
+  //   width: 200,
+  //   height: 200,
+  // },
+  // title: {
+  //   fontSize: 20,
+  //   fontWeight: "bold",
+  //   color: "rgba(53, 44, 135, 1)",
+  //   marginBottom: 16,
+  // },
   label: {
     fontSize: 14,
     marginBottom: 10,

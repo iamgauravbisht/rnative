@@ -6,11 +6,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const WelcomeScreen = () => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     router.push("signIn");
-  //   }, 3000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("signIn");
+    }, 3000);
+  }, []);
 
   return (
     <SafeAreaView className="h-full">
