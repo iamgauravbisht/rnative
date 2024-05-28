@@ -42,6 +42,10 @@ export default function RootLayout() {
         <Stack.Screen name="pageThree" options={{ headerShown: false }} />
         <Stack.Screen name="pageFour" options={{ headerShown: false }} />
         <Stack.Screen name="pageFive" options={{ headerShown: false }} />
+        <Stack.Screen name="pageSix" options={{ headerShown: false }} />
+        <Stack.Screen name="pageSeven" options={{ headerShown: false }} />
+        <Stack.Screen name="pageEight" options={{ headerShown: false }} />
+        <Stack.Screen name="pageNine" options={{ headerShown: false }} />
       </Stack>
       {/* </ThemeProvider> */}
     </GestureHandlerRootView>

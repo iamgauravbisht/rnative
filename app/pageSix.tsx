@@ -15,7 +15,7 @@ import { images } from "../constants/images";
 export default function Screen() {
   const [name, setName] = useState("");
   const handlePress = () => {
-    router.push("pageSix");
+    router.push("pageSeven");
   };
 
   return (
