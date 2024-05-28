@@ -13,6 +13,7 @@ import { router } from "expo-router";
 import { images } from "../constants/images";
 
 export default function Screen() {
+  const [name, setName] = useState("name");
   const handlePress = () => {
     router.push("pageSix");
   };
@@ -34,19 +35,22 @@ export default function Screen() {
             Create Account
           </Text>
         </View>
-        <View className="flex flex-1 flex-col items-center ">
-          <View className="flex items-center justify-center ">
+        <View className="flex flex-1 flex-col items-center w-full">
+          <View className="flex flex-col justify-center w-full">
             <Image source={images.eight} className="w-72 h-48" />
-            <View className="mt-5 w-[300px] flex flex-col gap-2 ">
+            <View className="mt-5 flex flex-col gap-2 ">
               <Text className="text-indigo-800 text-2xl font-bold  ">
                 Create an account
               </Text>
               <Text>Please fill in the information below </Text>
             </View>
+            <CustomInput
+              handleChange={(value) => setName(value)}
+              value={name}
+              label="Confirm Password"
+            />
           </View>
-          <CustomInput />
         </View>
-
         <TouchableOpacity style={styles.button} onPress={handlePress}>
           <Text className="text-white text-lg text-center font-semibold">
             Next
@@ -70,15 +74,17 @@ const styles = StyleSheet.create({
 function CustomInput({
   handleChange,
   value,
+  label,
 }: {
-  handleChange: () => {};
-  value: () => {};
+  handleChange: (text: string) => void;
+  value: string;
+  label: string;
 }) {
   return (
-    <View>
-      <Text className="text-md mb-3">Phone Number</Text>
+    <View className="py-2">
+      <Text className="text-lg font-bold mb-3">{label}</Text>
       <TextInput
-        className="flex-1 text-lg py-2"
+        className="text-md py-2 px-4 rounded-md border border-gray-300"
         placeholder="Name"
         onChangeText={handleChange}
         keyboardType="numeric"
